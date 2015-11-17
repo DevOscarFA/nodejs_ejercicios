@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Laboratorio 7</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+</head>
+<body ng-app="Ejercicio">
+
+	<div ng-controller="ControllerOne">
+		<h2>Valor a:</h2>
+		<p><input type="text" ng-model="var_a"></p>
+
+		<h2>Valor a:</h2>
+		<p><input type="text" ng-model="var_b"></p>
+
+		<h2>Concatenar:</h2>
+		<span>{{ var_a + var_b }}</span>
+
+	</div>
+
+	<div ng-controller="ControllerTwo">
+		<h2>Valor a:</h2>
+		<p><input type="text" ng-model="var_c"></p>
+
+		<h2>Valor a:</h2>
+		<p><input type="text" ng-model="var_d"></p>
+
+		<h2>Operaciones de * y /</h2>
+		<p>Multiplicación </p><span>{{ var_c * var_d }}</span><br >
+		<p>Divición </p><span>{{ var_c / var_d }}</span>
+
+	</div>
+
+	<script>
+		angular.module('Ejercicio', [])
+		   .controller('ControllerOne', function($scope){
+		   	
+		   }).controller('ControllerTwo', function($scope){
+		   	
+		   });
+	</script>
+</body>
+</html>
