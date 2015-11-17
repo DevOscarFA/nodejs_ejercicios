@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Laboratorio 5</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+</head>
+<body ng-app="Ejercicio">
+	<div ng-controller="ControllerOne">
+		<h2>Valor a:</h2>
+		<p><input type="number" ng-model="var_a"></p>
+
+		<h2>Valor a:</h2>
+		<p><input type="number" ng-model="var_b"></p>
+
+		<button ng-click="simple_click()">
+			Click
+		</button>
+
+		<h2>Resultado:</h2>
+		<p><input type="text" ng-model="res"></p>
+
+		<h2>Resultado 2:</h2>
+		<span>{{ var_a + var_b }}</span>
+
+	</div>
+	<script>
+		angular.module('Ejercicio', [])
+		   .controller('ControllerOne', function($scope){
+		   		$scope.simple_click = function(){
+		   			$scope.res = parseInt($scope.var_a) + parseInt($scope.var_b);
+		   		};
+		   });
+	</script>
+</body>
+</html>
