@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Laboratorio 8</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+</head>
+<body ng-app="Ejercicio">
+
+	<div ng-controller="ControllerOne">
+		<div ng-show="revealMej">
+			<h2>Hola laboratorio 8!</h2>
+		</div>
+		<button ng-click="showMessage()" ng-show="showButton">Presioname para mostrar el mensaje!</button>
+		<button ng-click="hideMessage()" ng-show="hideButton">Ocultar mensaje!</button>
+	</div>
+
+	<div ng-controller="ControllerTwo">
+		
+		<h2>Eventos del mouse</h2>
+		<p><input type="text" ng-model="var_d" ng-mouseleave="outMouseInput()" ng-mouseenter="onMouseInput()"></p>
+
+		{{ msj_event }}
+
+	</div>
+
+	<script>
+		angular.module('Ejercicio', [])
+		   .controller('ControllerOne', function($scope){
+
+		   		$scope.revealMej = false;
+		   		$scope.showButton = true;
+		   		$scope.hideButton = false;
+
+		   		$scope.showMessage = function(){
+					$scope.revealMej = true;
+		   			$scope.showButton = false;
+		   			$scope.hideButton = true;
+		   		}
+
+		   		$scope.hideMessage = function(){
+					$scope.revealMej = false;
+		   			$scope.showButton = true;
+		   			$scope.hideButton = false;
+		   		}
+		   	
+		   }).controller('ControllerTwo', function($scope){
+
+		   	    $scope.outMouseInput = function(){
+	       			$scope.msj_event = "Cursor sale del input";
+	       		};
+
+	       		$scope.onMouseInput = function(){
+	       			$scope.msj_event = "Cursor entra al input";
+	       		}
+		   });
+	</script>
+</body>
+</html>
