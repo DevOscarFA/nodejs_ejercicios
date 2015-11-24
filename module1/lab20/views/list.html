@@ -1,0 +1,16 @@
+<table ng-class="special_class">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Roll</th>
+            <th>Porcentaje</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="l in list">
+            <td>{{ l.Name }}</td>
+            <td>{{ l.RollNo }}</td>
+            <td>{{ l.Percentage }}</td>
+        </tr>
+    </tbody>
+</table>
