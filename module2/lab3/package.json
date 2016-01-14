@@ -1,15 +1,16 @@
 {
   "name": "lab3",
   "version": "1.0.0",
-  "description": "",
+  "description": "Laboratorio 3",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Oscar Fernandez",
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.3"
-  }
+  },
+  "devDependencies": {}
 }
